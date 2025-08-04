@@ -1,0 +1,62 @@
+.filters-header{
+    margin-bottom: 0;
+    font-family: "Inter", sans-serif;
+    font-weight: bolder;
+}
+.product-feed{
+    margin-top: 10px;
+}
+
+.product-container{
+    border: 0.1px solid rgba(128,128,128,0.32);
+    text-align: left;
+    max-width: 45%;
+}
+
+.product-name-text{
+    max-width: 100%;
+}
+
+.feed-filters{
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.filter-row{
+    white-space: nowrap;
+    overflow-x: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    width: calc(100% - 90px);
+    vertical-align: middle;
+}
+
+.filter-type-text{
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    display: inline-block;
+    width: 80px;
+    vertical-align: middle;
+}
+
+.filter-option{
+    background-color: transparent;
+    border: 0.1px solid gray;
+    padding: 10px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+    min-width: 50px;
+    text-align: center;
+}
+
+.selected-option{
+    background-color: #FF6000;
+    color: white;
+    border: 0.1px solid #FF6000;
+}

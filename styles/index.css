@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poetsen+One&display=swap');
+
+.logo-wrapper {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900; /* Inter supports up to 900 */
+    font-size: 1.5rem;
+    vertical-align: middle;
+    flex: 1;
+    text-align: right!important;
+}
+
+.search-wrapper {
+    vertical-align: top;
+    flex: 3;
+}
+
+.search-inputs-wrapper {
+    display: flex;
+}
+
+.search-input {
+    background: #f1f4f7;
+    border-radius: 0 5px 5px 0;
+    padding: 15px 15px 15px 20px;
+    box-sizing: border-box;
+    font-size: 12px;
+    flex: 1;
+    border: none;
+    outline: none;
+}
+
+.search-input-button {
+    background: #f1f4f7;
+    padding: 15px;
+    border-radius: 5px 0 0 5px;
+    color: #f27a1a;
+    appearance: none;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    display: flex; /* To align icon properly */
+    align-items: center; /* To align icon properly */
+    cursor: pointer; /* Indicate it's clickable */
+}
+
+.navbar-middle-row {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute space between elements */
+
+}
+
+.navbar-top-text {
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+    color: gray;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.navbar-top-text:hover {
+    color: #f27a1a;
+}
+
+.site-wrapper {
+    max-width: 1200px;
+    text-align: left; /* Changed to left for LTR languages */
+    margin: 0 auto; /* Center the wrapper */
+    padding: 0 15px; /* Add some padding for smaller screens */
+}
+
+.logo-dezh {
+    background-color: #FF6000;
+    padding: 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.navbar-right-side-items {
+    flex: 2;
+    margin-left: 50px; /* Keep as is for LTR */
+    text-align: left; /* Changed to right for LTR */
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right-side-item {
+    font-family: "Inter", sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex; /* To align icon and text */
+    align-items: center; /* To align icon and text */
+}
+
+.navbar-right-side-item-text {
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+    margin-top: 1px;
+}
+
+.navbar-right-side-item:hover {
+    background: #f1f4f7;
+}
+
+.navbar-bottom-row {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-around; /* Distribute categories evenly */
+}
+
+.navbar-category-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: gray;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1; /* Allow categories to take equal space */
+    min-width: 100px; /* Ensure categories have a minimum width */
+}
+
+.navbar-category-text:hover {
+    background: #f1f4f7;
+}
+
+.navbar-separator {
+    width: 100%;
+    display: flex;
+}
+
+.colored-block {
+    background: #f27a1a;
+    flex: 1;
+    height: 10px;
+    display: inline-block;
+}
+
+.body-row-1 {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.row-1-item {
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    margin: 5px; /* Add some margin between items */
+    flex-basis: 15%; /* Distribute space, adjust as needed */
+    min-width: 80px; /* Ensure a minimum width */
+}
+
+.row-1-item:hover {
+    opacity: 0.8;
+}
+
+.row-1-item-image {
+    border-radius: 500px;
+    width: 70px;
+    height: 70px; /* Ensure consistent height */
+    object-fit: cover; /* Ensure image covers the area */
+}
+
+.row-1-item-text {
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+    font-weight: bolder;
+    display: block; /* Ensure it's on a new line */
+    margin-top: 5px; /* Add some space between image and text */
+}
+
+.body-row-2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Add some spacing */
+}
+
+.navbar-top-row {
+    width: 100%;
+    text-align: right; /* Changed to right for LTR */
+    display: flex;
+    justify-content: flex-end; /* Push items to the right */
+}
+
+.body-row-2-button {
+    cursor: pointer;
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-family: "Inter", sans-serif;
+    font-weight: bolder;
+    font-size: 1rem;
+    margin-left: 5px; /* Keep margin for spacing */
+    margin-right: 5px; /* Add margin on the right as well */
+}
+
+.body-row-2-button:hover {
+    opacity: 0.8;
+}
+
+.product-carousel-wrapper {
+    width: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    background: rgba(242, 122, 26, 0.05);
+    margin-top: 15px;
+}
+
+.carousel-title {
+    color: #f27a1a;
+    font-weight: bolder;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    margin-left: 10px;
+    text-align: right; /* Align title to the right */
+}
+
+.carousel {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 15px; /* Add padding for scrollbar */
+}
+
+.product-container {
+    background: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    height: 400px;
+    position: relative;
+    vertical-align: top;
+    cursor: pointer;
+    width: 270px; /* Set a fixed width for product cards */
+    white-space: normal; /* Allow text to wrap */
+}
+
+.product-container:hover {
+    opacity: 0.8;
+}
+
+.product-price {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+    color: #FF6000;
+    position: absolute;
+    bottom: 50px;
+    left: 10px; /* Position to the left */
+    right: 10px; /* Ensure it takes available width */
+    text-align: left; /* Align price to the left */
+}
+
+.product-image {
+    width: 100%;
+    border-radius: 5px;
+    background-size: cover;
+    height: 250px;
+    background-position: center center;
+}
+
+.product-name-text {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    height: 60px; /* Fixed height for product names to align buttons */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Show ellipsis for overflow */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+    -webkit-box-orient: vertical;
+    text-align: right; /* Align product name to the right */
+    margin-bottom: 5px; /* Add space before price */
+}
+
+.product-add-to-cart-button {
+    background: #FF6000;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: bolder;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: calc(100% - 20px);
+    position: absolute;
+    bottom: 10px;
+    left: 10px; /* Position to the left */
+    box-sizing: border-box;
+}
+
+.product-add-to-cart-button:hover {
+    background: #f27a1a;
+}
+
+.brand-image {
+    background-size: cover;
+    width: 400px;
+    height: 200px;
+    border-radius: 5px;
+    margin-left: 10px;
+    display: inline-block;
+    background-position: center;
+    cursor: pointer;
+}
+
+.brand-image:hover {
+    opacity: 0.8;
+}
+
+.footer-desktop {
+    margin-top: 0;
+    text-align: left; /* Changed to left for LTR */
+    padding: 50px;
+    display: flex;
+    background: rgba(242, 122, 26, 0.05);
+    justify-content: space-around; /* Distribute columns */
+}
+
+.footer-column {
+    font-family: "Inter", sans-serif;
+    flex: 1;
+    padding: 0 20px; /* Add padding between columns */
+}
+
+.footer-column-title {
+    color: #FF6000;
+    font-weight: bolder;
+    font-size: 16px;
+    text-align: right; /* Align title to the right */
+}
+
+.footer-link {
+    color: gray;
+    font-size: 12px;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    text-align: right; /* Align links to the right */
+}
+
+.footer-link:hover {
+    color: #FF6000;
+}
+
+.footer-icon {
+    font-size: 20px;
+}
+
+.footer-icon-text {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 4px;
+    margin-left: 5px;
+}
+
+.contact-support-button {
+    border: 0.1px solid gray;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "Inter", sans-serif;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: right; /* Align button text */
+    width: 100%; /* Make button full width */
+    box-sizing: border-box;
+}
+
+.product-carousel-secondary {
+    background: rgba(241, 244, 247, 0.5);
+    margin-top: 25px;
+}
+
+.search-autocomplete-wrapper {
+    background-color: white;
+    height: fit-content;
+    width: 575px; /* Adjust width as needed */
+    position: absolute;
+    margin-top: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(32, 33, 36, .28);
+    z-index: 9999;
+    max-height: 500px;
+    overflow-y: auto;
+    left: 0; /* Position to the left */
+    right: 0; /* Position to the right */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+}
+
+.autocomplete-suggestion {
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    margin: 5px;
+    cursor: pointer;
+    text-align: right; /* Align suggestion text */
+}
+
+.autocomplete-suggestion:hover {
+    background-color: #e9ebee;
+}
+
+.search-suggestion-text {
+    margin-left: 10px;
+}
+
+.mobile {
+    display: none;
+}
+
+.navbar-third-row {
+    margin-top: 25px;
+    width: calc(100% - 50px);
+    margin-left: 25px;
+}
+
+.form-general-input {
+    padding: 10px;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    outline: none;
+    border: 0.1px solid gray;
+    width: 500px;
+}
+
+@media screen and (max-width: 1000px) {
+    .navbar-top-row {
+        display: flex;
+        justify-content: space-around; /* Distribute items */
+        margin-top: 10px;
+    }
+    .navbar-top-text {
+        flex: 1;
+        margin-left: 0;
+        margin-right: 0; /* Remove right margin */
+        text-align: center;
+    }
+    .desktop {
+        display: none;
+    }
+    .logo-wrapper {
+        flex: 3; /* Make logo take more space */
+        text-align: center; /* Center logo */
+    }
+    .mobile {
+        display: block;
+    }
+    .navbar-middle-row {
+        justify-content: space-between; /* Ensure spacing for mobile */
+        padding: 0 15px; /* Add padding for mobile */
+        box-sizing: border-box;
+    }
+    .search-wrapper {
+        flex: none; /* Remove flex for search on mobile */
+        width: 100%; /* Make search take full width */
+        padding: 0 15px; /* Add padding */
+        box-sizing: border-box; /* Include padding in width */
+        margin-top: 10px; /* Add spacing */
+    }
+    .search-inputs-wrapper {
+        width: 100%;
+    }
+    .search-input {
+        width: 100%;
+    }
+    .search-autocomplete-wrapper {
+        width: calc(100% - 30px); /* Adjust for padding */
+        left: 15px; /* Adjust for padding */
+        right: 15px; /* Adjust for padding */
+    }
+    .navbar-right-side-items {
+        margin-left: 0;
+        flex: 1; /* Allow items to take space */
+    }
+    .navbar-right-side-item {
+        padding: 0;
+        margin-left: 0;
+        margin-right: 10px; /* Adjust margin for spacing */
+    }
+    .navbar-right-side-item-text {
+        display: none; /* Hide text on mobile */
+    }
+    .navbar-bottom-row {
+        display: flex; /* Keep as flex for horizontal scrolling */
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        height: 40px;
+        padding: 0 15px; /* Add padding */
+        box-sizing: border-box;
+    }
+    .navbar-category-text {
+        flex: none; /* Remove flex grow on mobile */
+        min-width: 100px; /* Ensure minimum width for scrolling */
+    }
+    .body-row-1 {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 0 15px; /* Add padding */
+        box-sizing: border-box;
+    }
+    .row-1-item {
+        display: inline-block;
+        flex: none; /* Remove flex grow on mobile */
+        margin: 5px;
+    }
+    .product-container {
+        width: 200px; /* Smaller width for mobile */
+    }
+    .footer-desktop {
+        flex-direction: column; /* Stack footer columns vertically */
+        align-items: center; /* Center stacked columns */
+    }
+    .footer-column {
+        text-align: center; /* Center text in footer columns */
+        margin-bottom: 20px; /* Add space between stacked columns */
+        padding: 0 15px; /* Add padding for mobile */
+    }
+    .footer-column-title, .footer-link, .contact-support-button {
+        text-align: center; /* Center all text elements in footer */
+    }
+    .site-wrapper {
+        padding: 0 10px; /* Reduce padding on very small screens */
+    }
+}

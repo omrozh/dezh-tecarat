@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>پرطرفدارترین محصولات در سایت خرید ایران، دژ تجارت</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/styles/profile.css">
+    <link rel="stylesheet" href="/styles/pdp.css">
+</head>
+<body style="margin: 0; padding: 0">
+    <script>
+        window.addEventListener("DOMContentLoaded", function e(){
+            {
+                let current_id_from_url = document.location.hash.replace("#tab_", "")
+                if(current_id_from_url){
+                    tabSwitcher(document.getElementById(`switcher_${current_id_from_url}`), current_id_from_url)
+                }
+            }
+        })
+        function tabSwitcher(trigger_elem, selected_tab){
+            if(document.getElementsByClassName('profile-tab-selection selected-selector').length > 0){
+                document.getElementsByClassName('selected-tab')[0].className = "tab";
+                document.getElementsByClassName("profile-tab-selection selected-selector")[0].className = "profile-tab-selection"
+            }
+            document.getElementById("mobile-menu").style.display = "none"
+
+            trigger_elem.className = "profile-tab-selection selected-selector";
+            document.getElementById(selected_tab).className = "selected-tab";
+            document.location = `#tab_${selected_tab}`
+        }
+    </script>
+    <div id="mobile-menu" class="mobile-menu mobile" style="padding: 0">
+            <div class="navbar">
+                <div class="navbar-top-row desktop">
+                    <span class="navbar-top-text navbar-top-text-first">
+                        فروشنده شوید
+                    </span>
+                    <span class="navbar-top-text">
+                        درباره ما
+                    </span>
+                    <span class="navbar-top-text">
+                        راهنما
+                    </span>
+                    <span class="navbar-top-text">
+                        کمپین ها
+                    </span>
+                </div>
+                <div class="navbar-middle-row">
+                    <div onclick="document.location = '/'" class="logo-wrapper">
+                        <span class="logo-dezh">دژ</span> تجارت
+                    </div>
+
+                    <div class="navbar-right-side-items">
+                        <span onclick="document.location = '/profile'" class="navbar-right-side-item">
+                            <i class="bi bi-person"></i>
+                            <div class="navbar-right-side-item-text desktop">
+                                ورود
+                            </div>
+                        </span>
+                        <span class="navbar-right-side-item">
+                            <i class="bi bi-bookmark-heart"></i>
+                            <div class="navbar-right-side-item-text desktop">
+                                موارد دلخواه من
+                            </div>
+                        </span>
+                        <span class="navbar-right-side-item">
+                            <i class="bi bi-basket"></i>
+                            <div class="navbar-right-side-item-text desktop">
+                                سبد خرید من
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <div class="navbar-third-row mobile">
+                    <div class="search-wrapper">
+                        <div class="search-inputs-wrapper">
+                            <input id="search-input-mobile" type="text" class="search-input" placeholder="محصول، دسته بندی یا برند را جستجو کنید">
+                            <div class="search-input-button">
+                                <i class="bi bi-search"></i>
+                            </div>
+                        </div>
+                        <div id="autocomplete-wrapper-mobile" class="search-autocomplete-wrapper">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-bottom-row">
+                    <span class="navbar-category-text">
+                        پوشاک
+                    </span>
+                    <span class="navbar-category-text">
+                        کفش
+                    </span>
+                    <span class="navbar-category-text">
+                        لوازم جانبی
+                    </span>
+                    <span class="navbar-category-text">
+                        کیف
+                    </span>
+                    <span class="navbar-category-text">
+                        لوازم خانگی
+                    </span>
+                    <span class="navbar-category-text">
+                        لباس زیر
+                    </span>
+                    <span class="navbar-category-text">
+                        لوازم آرایشی
+                    </span>
+                    <span class="navbar-category-text">
+                        ورزشی
+                    </span>
+                </div>
+                <div class="navbar-separator">
+                    <div class="colored-block" style="background-color: #f27a1a">
+
+                    </div>
+                    <div class="colored-block" style="background-color: #49C7ED">
+
+                    </div>
+                    <div class="colored-block" style="background-color: #7723DB">
+
+                    </div>
+                    <div class="colored-block" style="background-color: #57B900">
+
+                    </div>
+                    <div class="colored-block" style="background-color: #5D196A">
+
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-tab-options-menu">
+                <p class="mobile-tab-options-title">عملیات</p>
+                <div id="switcher_orders_mobile" onclick="tabSwitcher(this, 'orders')" class="profile-tab-selection">
+                    <i class="bi bi-box-seam"></i> <span class="profile-tab-selection-text">سفارشات من</span>
+                </div>
+                <div id="switcher_ratings_mobile" onclick="tabSwitcher(this, 'ratings')" class="profile-tab-selection">
+                    <i class="bi bi-chat-heart"></i> <span class="profile-tab-selection-text">نظرات من</span>
+                </div>
+                <div id="switcher_personal-information_mobile" onclick="tabSwitcher(this, 'personal-information')" class="profile-tab-selection">
+                    <i class="bi bi-person-gear"></i> <span class="profile-tab-selection-text">اطلاعات کاربری من</span>
+                </div>
+                <div class="profile-tab-selection">
+                    <i class="bi bi-bookmark-heart"></i> <span class="profile-tab-selection-text">موارد ذخیره شده</span>
+                </div>
+                <div class="profile-tab-selection">
+                    <i class="bi bi-headset"></i> <span class="profile-tab-selection-text">خدمات مشتریان</span>
+                </div>
+                <div class="profile-tab-selection">
+                    <i class="bi bi-box-arrow-right"></i> <span class="profile-tab-selection-text">خروج</span>
+                </div>
+            </div>
+    </div>
+    <center>
+        <div class="site-wrapper">
+            <div class="navbar">
+                <div class="navbar-top-row desktop">
+                    <span class="navbar-top-text navbar-top-text-first">
+                        فروشنده شوید
+                    </span>
+                    <span class="navbar-top-text">
+                        درباره ما
+                    </span>
+                    <span class="navbar-top-text">
+                        راهنما
+                    </span>
+                    <span class="navbar-top-text">
+                        کمپین ها
+                    </span>
+                </div>
+                <div class="navbar-middle-row">
+                    <div onclick="document.location = '/'" class="logo-wrapper">
+                        <span class="logo-dezh">دژ</span> تجارت
+                    </div>
+                    <div class="search-wrapper desktop">
+                        <div class="search-inputs-wrapper">
+                            <input id="search-input-desktop" type="text" class="search-input" placeholder="محصول، دسته بندی یا برند را جستجو کنید">
+                            <div class="search-input-button">
+                                <i class="bi bi-search"></i>
+                            </div>
+                        </div>
+                        <div id="autocomplete-wrapper-desktop" class="search-autocomplete-wrapper">
+
+                        </div>
+                    </div>
+                    <div class="navbar-right-side-items">
+                        <span onclick="document.location = '/profile'" class="navbar-right-side-item">
+                            <i class="bi bi-person"></i>
+                            <div class="navbar-right-side-item-text desktop">
+                                ورود
+                            </div>
+                        </span>
+                        <span class="navbar-right-side-item">
+                            <i class="bi bi-bookmark-heart"></i>
+                            <div class="navbar-right-side-item-text desktop">
+                                موارد دلخواه من
+                            </div>
+                        </span>
+                        <span class="navbar-right-side-item">
+                            <i class="bi bi-basket"></i>
+                            <div class="navbar-right-side-item-text desktop">
+                                سبد خرید من
+                            </div>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="navbar-bottom-row">
+                    <span class="navbar-category-text">
+                        پوشاک
+                    </span>
+                    <span class="navbar-category-text">
+                        کفش
+                    </span>
+                    <span class="navbar-category-text">
+                        لوازم جانبی
+                    </span>
+                    <span class="navbar-category-text">
+                        کیف
+                    </span>
+                    <span class="navbar-category-text">
+                        لوازم خانگی
+                    </span>
+                    <span class="navbar-category-text">
+                        لباس زیر
+                    </span>
+                    <span class="navbar-category-text">
+                        لوازم آرایشی
+                    </span>
+                    <span class="navbar-category-text">
+                        ورزشی
+                    </span>
+                </div>
+                <div class="navbar-separator">
+                    <div class="colored-block" style="background-color: #f27a1a">
+
+                    </div>
+                    <div class="colored-block" style="background-color: #49C7ED">
+
+                    </div>
+                    <div class="colored-block" style="background-color: #7723DB">
+
+                    </div>
+                    <div class="colored-block" style="background-color: #57B900">
+
+                    </div>
+                    <div class="colored-block" style="background-color: #5D196A">
+
+                    </div>
+                </div>
+            </div>
+            <div class="profile-tabs-area">
+            <div class="profile-tab-selector">
+              <div id="switcher_orders" onclick="tabSwitcher(this, 'orders')" class="profile-tab-selection selected-selector">
+                <i class="bi bi-box-seam"></i> <span class="profile-tab-selection-text">سفارشات من</span>
+              </div>
+              <div id="switcher_ratings" onclick="tabSwitcher(this, 'ratings')" class="profile-tab-selection">
+                <i class="bi bi-chat-heart"></i> <span class="profile-tab-selection-text">نظرات من</span>
+              </div>
+              <div id="switcher_personal-information" onclick="tabSwitcher(this, 'personal-information')" class="profile-tab-selection">
+                <i class="bi bi-person-gear"></i> <span class="profile-tab-selection-text">اطلاعات کاربری من</span>
+              </div>
+              <div class="profile-tab-selection">
+                <i class="bi bi-bookmark-heart"></i> <span class="profile-tab-selection-text">موارد ذخیره شده</span>
+              </div>
+              <div class="profile-tab-selection">
+                <i class="bi bi-headset"></i> <span class="profile-tab-selection-text">خدمات مشتریان</span>
+              </div>
+
+              <div class="profile-tab-selection">
+                <i class="bi bi-box-arrow-right"></i> <span class="profile-tab-selection-text">خروج</span>
+              </div>
+            </div>
+            <div id="review-modal-overlay" class="modal-overlay" style="display: none;">
+                <div id="review-modal-content" class="modal-content">
+                    <span class="close-modal">×</span>
+                    <h2 class="modal-title">امتیاز دهید</h2>
+
+                    <div class="modal-product-info">
+                        <div class="modal-product-image"></div>
+                        <p class="modal-product-name"></p>
+                    </div>
+
+                    <div class="star-rating-section">
+                        <p class="rating-prompt">چند ستاره می‌دهید؟</p>
+                        <div class="stars-container">
+                            <i class="bi bi-star" data-value="1"></i>
+                            <i class="bi bi-star" data-value="2"></i>
+                            <i class="bi bi-star" data-value="3"></i>
+                            <i class="bi bi-star" data-value="4"></i>
+                            <i class="bi bi-star" data-value="5"></i>
+                        </div>
+                        <input type="hidden" id="selected-rating" value="0">
+                    </div>
+
+                    <div class="comment-section">
+                        <p class="comment-prompt">نظر شما:</p>
+                        <textarea id="review-comment" placeholder="تجربیات خود را در مورد محصول به اشتراک بگذارید..." rows="5"></textarea>
+                    </div>
+
+                    <div class="modal-buttons">
+                        <button class="modal-button cancel-button">لغو</button>
+                        <button class="modal-button submit-button purple-theme">ارسال نظر</button>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-tabs">
+                <div class="selected-tab" id="orders">
+                    <div class="order">
+                        <div style="background-image: url('https://cdn.dsmcdn.com/ty1633/prod/QC/20250206/18/4147eaa9-0fcf-37d0-9471-ff9933535020/1_org_zoom.jpg')" class="order-image"></div>
+                        <div class="order-details" id="{order-id}">
+                            <p class="order-details-product-name"><strong>برشکا</strong> شلوار زنانه روستیک</p>
+                            <p class="order-details-order-date">2025/06/07</p>
+                            <p class="order-details-price">1100.00₺</p>
+                            <button class="order-colorful-button purple-theme">دوباره بخرید</button>
+                            <p class="order-details-order-status">وضعیت سفارش: <strong>سفارش دریافت شد</strong></p>
+                            <div class="action-buttons">
+                                <button class="order-colorful-button orange-theme">دریافت پشتیبانی</button>
+                                <button class="order-colorful-button yellow-theme">امتیاز دهید</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order">
+                        <div style="background-image: url('https://cdn.dsmcdn.com/ty1679/prod/QC/20250512/10/a75e9149-a02c-3237-82cc-d0a7799b48a1/1_org_zoom.jpg')" class="order-image"></div>
+                        <div class="order-details">
+                            <p class="order-details-product-name"><strong>مادام کوکو</strong> ست ملحفه یک نفره ۱۰۰% پنبه روئت...</p>
+                            <p class="order-details-order-date">2025/06/07</p>
+                            <p class="order-details-price">324.00₺</p>
+                            <button class="order-colorful-button purple-theme">دوباره بخرید</button>
+                            <p class="order-details-order-status">وضعیت سفارش: <strong>ارسال شده</strong></p>
+                            <div class="action-buttons">
+                                <button class="order-colorful-button orange-theme">دریافت پشتیبانی</button>
+                                <button class="order-colorful-button yellow-theme">امتیاز دهید</button>
+                                <button class="order-colorful-button green-theme">پیگیری مرسوله</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order">
+                        <div style="background-image: url('https://cdn.dsmcdn.com/ty1633/prod/QC/20250206/18/4147eaa9-0fcf-37d0-9471-ff9933535020/1_org_zoom.jpg')" class="order-image"></div>
+                        <div class="order-details">
+                            <p class="order-details-product-name"><strong>برشکا</strong> شلوار زنانه روستیک</p>
+                            <p class="order-details-order-date">2025/06/07</p>
+                            <p class="order-details-price">1100.00₺</p>
+                            <button class="order-colorful-button purple-theme">دوباره بخرید</button>
+                            <p class="order-details-order-status">وضعیت سفارش: <strong>ارسال شده</strong></p>
+                            <div class="action-buttons">
+                                <button class="order-colorful-button orange-theme">دریافت پشتیبانی</button>
+                                <button class="order-colorful-button yellow-theme">امتیاز دهید</button>
+                                <button class="order-colorful-button green-theme">پیگیری مرسوله</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab" id="ratings">
+                    <div class="order">
+                        <div style="background-image: url('https://cdn.dsmcdn.com/ty1633/prod/QC/20250206/18/4147eaa9-0fcf-37d0-9471-ff9933535020/1_org_zoom.jpg')" class="order-image"></div>
+                        <div class="order-details" >
+                            <p class="order-details-product-name" style="margin-bottom: 0"><strong>برشکا</strong> شلوار زنانه روستیک</p>
+                            <div class="product-average-ratings-wrapper">
+                                <div class="rating-score">
+                                    3.5
+                                </div>
+                                <div class="starts">
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <strong class="ratings-separator">
+                                    -
+                                </strong>
+                                <div class="number-of-ratings">
+                                    <strong>55</strong> امتیاز
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <center class="tab" id="personal-information">
+                    <form class="personal-info-form">
+                        <h1 class="profile-info-header">اطلاعات پروفایل</h1>
+                        <p class="profile-info-subheader">برای ارائه بهترین تجربه در دژ تجارت، اطلاعات مورد نیاز خود را از اینجا ویرایش کنید.</p>
+                        <p class="form-input-label">آدرس ایمیل</p>
+                        <input type="text" class="form-general-input">
+                        <p class="profile-info-subheader">تغییر رمز عبور</p>
+                        <p class="profile-info-subheader">رمز عبور شما باید حداقل شامل یک حرف، عدد یا کاراکتر خاص باشد. رمز عبور شما باید حداقل 8 کاراکتر داشته باشد.</p>
+                        <p class="form-input-label">رمز عبور فعلی</p>
+                        <input type="password" class="form-general-input">
+                        <p class="form-input-label">رمز عبور جدید</p>
+                        <input type="password" class="form-general-input">
+                        <p class="profile-info-subheader">آدرس های ثبت شده من</p>
+                        <div class="saved-address">
+                            <span class="remove-address"><i class="bi bi-x"></i></span>
+                            <strong>لوازم خانگی</strong>
+                            <p>محله چاملیجا، خیابان اوزه‌که، شماره 5، واحد C/2</p>
+                        </div>
+                        <div class="saved-address">
+                            <span class="remove-address"><i class="bi bi-x"></i></span>
+                            <strong>لوازم خانگی</strong>
+                            <p>محله چاملیجا، خیابان اوزه‌که، شماره 5، واحد C/2</p>
+                        </div>
+                        <div class="saved-address">
+                            <span class="remove-address"><i class="bi bi-x"></i></span>
+                            <strong>لوازم خانگی</strong>
+                            <p>محله چاملیجا، خیابان اوزه‌که، شماره 5، واحد C/2</p>
+                        </div>
+                    </form>
+                </center>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-separator" style="margin-top: 25px">
+            <div class="colored-block" style="background-color: #f27a1a">
+
+            </div>
+            <div class="colored-block" style="background-color: #49C7ED">
+
+            </div>
+            <div class="colored-block" style="background-color: #7723DB">
+
+            </div>
+            <div class="colored-block" style="background-color: #57B900">
+
+            </div>
+            <div class="colored-block" style="background-color: #5D196A">
+
+            </div>
+        </div>
+        <div class="footer-desktop">
+            <div class="footer-column">
+                <p class="footer-column-title">شرکت</p>
+                <a href="/about" class="footer-link">درباره ما</a>
+                <a href="/support" class="footer-link">خدمات مشتریان</a>
+                <a href="/careers" class="footer-link">مشاغل</a>
+                <a href="/privacy" class="footer-link">امنیت داده ها</a>
+                <a href="/security" class="footer-link">خرید امن</a>
+            </div>
+            <div class="footer-column">
+                <p class="footer-column-title">دژ تجارت</p>
+                <a href="/faq" class="footer-link">سوالات متداول</a>
+                <a href="/campaigns" class="footer-link">کمپین ها</a>
+                <a href="/guide" class="footer-link">راهنمای تراکنش</a>
+            </div>
+            <div class="footer-column desktop">
+                <p class="footer-column-title">ما را دنبال کنید</p>
+                <a href="/follow/instagram" class="footer-link"><i class="bi bi-instagram footer-icon"></i> <span class="footer-icon-text">اینستاگرام</span></a>
+                <a href="/follow/tiktok" class="footer-link"><i class="bi bi-tiktok footer-icon"></i> <span class="footer-icon-text">تیک تاک</span></a>
+                <a href="/follow/facebook" class="footer-link"><i class="bi bi-facebook footer-icon"></i> <span class="footer-icon-text">فیس بوک</span></a>
+                <a href="/follow/x" class="footer-link"><i class="bi bi-twitter-x footer-icon"></i> <span class="footer-icon-text">ایکس</span></a>
+                <a href="/follow/youtube" class="footer-link"><i class="bi bi-youtube footer-icon"></i> <span class="footer-icon-text">یوتیوب</span></a>
+            </div>
+            <div class="footer-column desktop">
+                <p class="footer-column-title">سوالی دارید؟</p>
+                <button class="contact-support-button" onclick="document.location = '/support'">با مرکز راه حل تماس بگیرید</button>
+                <p class="footer-link">یا</p>
+                <a href="mailto:info@dezhtecarat.com" class="footer-link footer-icon">info@dezhtecarat.com</a>
+            </div>
+        </div>
+        <div class="footer-desktop mobile" style="padding-top: 5px">
+            <div class="footer-column">
+                <p class="footer-column-title">ما را دنبال کنید</p>
+                <a href="/follow/instagram" class="footer-link"><i class="bi bi-instagram footer-icon"></i> <span class="footer-icon-text">اینستاگرام</span></a>
+                <a href="/follow/tiktok" class="footer-link"><i class="bi bi-tiktok footer-icon"></i> <span class="footer-icon-text">تیک تاک</span></a>
+                <a href="/follow/facebook" class="footer-link"><i class="bi bi-facebook footer-icon"></i> <span class="footer-icon-text">فیس بوک</span></a>
+                <a href="/follow/x" class="footer-link"><i class="bi bi-twitter-x footer-icon"></i> <span class="footer-icon-text">ایکس</span></a>
+                <a href="/follow/youtube" class="footer-link"><i class="bi bi-youtube footer-icon"></i> <span class="footer-icon-text">یوتیوب</span></a>
+            </div>
+            <br>
+            <div class="footer-column">
+                <p class="footer-column-title">سوالی دارید؟</p>
+                <button class="contact-support-button" onclick="document.location = '/support'">با مرکز راه حل تماس بگیرید</button>
+                <p class="footer-link">یا</p>
+                <a href="mailto:info@dezhtecarat.com" class="footer-link footer-icon">info@dezhtecarat.com</a>
+            </div>
+        </div>
+    </center>
+    <script src="/scripts/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+.product-details-wrapper{
+    display: flex;
+    margin-top: 25px;
+    gap: 25px;
+}
+
+.product-images-wrapper{
+    flex: 2;
+}
+
+.product-information-wrapper{
+    flex: 3;
+}
+
+#product-main-image{
+    width: 375px;
+    border-radius: 5px;
+}
+
+.product-title{
+    font-family: 'Inter', sans-serif;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.product-image-selector{
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 375px;
+}
+
+.product-image-selector-image{
+    border-radius: 5px;
+    height: 75px;
+}
+
+.product-delivery-information{
+    flex: 1;
+}
+
+.product-delivery-information-card{
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px solid #e9ebee;
+    margin-top: 10px;
+}
+
+.product-delivery-information-title{
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+}
+
+.product-delivery-information-text{
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+}
+
+.rating-score{
+    display: inline-block;
+    font-family: "Inter", sans-serif;
+    font-weight: bolder;
+    font-size: 12px;
+}
+
+.starts{
+    display: inline-block;
+    font-size: 12px;
+    color: #FFD700;
+    vertical-align: top;
+    margin-top: 2px;
+}
+
+.ratings-separator{
+    display: inline-block;
+    vertical-align: top;
+    color: gray;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.number-of-ratings{
+    display: inline-block;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+}
+
+.dezh-tecarat-guarantee{
+    background: rgba(255, 96, 0, 0.1);
+    color: #FF6000;
+    font-family: "Inter", sans-serif;
+    font-weight: bolder;
+    padding: 10px;
+    border-radius: 50px;
+    margin-top: 10px;
+    width: fit-content;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+.product-price-title{
+    font-family: "Inter", sans-serif;
+    font-weight: bolder;
+    color: #FF6000;
+}
+
+.product-add-to-cart-button-main{
+    position: relative;
+    flex: 1;
+    vertical-align: top;
+    display: inline-block;
+    width: 90%;
+    border: 1px solid #FF6000;
+}
+
+.product-small-action-button{
+    vertical-align: top;
+    display: inline-block;
+    background: transparent;
+    color: #676767;
+    border: 1px solid #e6e9ec;
+    font-family: "Inter", sans-serif;
+    font-weight: bolder;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: -10px;
+}
+
+.action-button-selected{
+    background: #676767;
+    border: 1px solid #676767;
+    color: white;
+}
+
+.product-size-selection{
+    margin-bottom: 40px;
+}
+
+.product-size-selection-title{
+    font-weight: bolder;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.product-summary-title{
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.product-summary-text{
+    margin-top: 20px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    color: gray;
+}
+
+.product-reviews-wrapper{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.product-reviews-title{
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.product-reviews{
+    overflow-y: auto;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.product-review{
+    padding: 15px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    height: 200px;
+    max-width: 500px;
+    vertical-align: top;
+    margin-left: 15px;
+    white-space: normal;
+    border: 1px solid #e9ebee;
+    display: inline-block;
+}
+
+.product-review-stars{
+    color: #FFD700;
+}
+
+.product-review-text{
+    font-family: "Inter", sans-serif;
+    color: gray;
+}
+
+.product-reviewer-name{
+    color: gray;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+}
+
+@media screen and (max-width: 1000px) {
+    .product-delivery-information{
+        display: none;
+    }
+    .product-add-to-cart-button-main{
+        width: 75%;
+    }
+    .mobile{
+        padding: 25px;
+        box-sizing: border-box;
+    }
+    .product-images-wrapper{
+        padding: 10px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .product-image-selector{
+        max-width: 100%;
+    }
+    #product-main-image{
+        width: 100%;
+    }
+    .product-reviews-title{
+        margin-left: 25px;
+    }
+    .product-reviews {
+        margin-left: 25px;
+        padding: 0;
+        box-sizing: border-box;
+        width: calc(100% - 50px);
+    }
+    .navbar-third-row{
+        padding: 0;
+    }
+}
+.product-review:nth-child(1){
+    margin-left: 0;
+}

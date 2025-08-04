@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin - Ürün Ekle | DezhTecarat</title>
+    <link rel="stylesheet" href="/styles/index.css">
+</head>
+<body style="padding: 0; margin: 0; background: #f1f2f7">
+  <div style="background: #273142">
+    <span style="opacity: 0">Dezh Tecarat</span>
+    <h1 style="font-family: 'Inter', sans-serif; color: white; margin-top: 0; margin-left: 25px; font-size: 20px; margin-bottom: 0">
+      dezhtecarat | <span style="color: gray; font-size: 20px">ürün ekle</span>
+    </h1>
+    <span style="opacity: 0">Dezh Tecarat</span>
+  </div>
+  <br>
+  <center style="font-family: 'Inter', sans-serif">
+    <div class="site-wrapper">
+    <a href="admin">Admin</a> > <a href="/admin/product">Ürün</a> > <a href="/admin/product/add">Ürün Ekle</a>
+    <br>
+      <br>
+    <form method="post" enctype="multipart/form-data" style="overflow-x: auto; height: 55vh; display: flex; background: white; border-radius: 5px; padding: 15px; box-sizing: border-box; margin-bottom: 15px">
+      <div style="flex: 1">
+        <p>Marka Adı</p>
+        <input class="form-general-input" placeholder="Marka Adı" name="brand_name" type="text">
+        <p>Ürün Adı</p>
+        <input class="form-general-input" placeholder="Ürün Adı" name="product_name" type="text">
+        <p>Ürün Fiyatı</p>
+        <input class="form-general-input" placeholder="Fiyat - TL Cinsinden" name="product_price_in_liras" type="text">
+        <p>Kategori</p>
+          <input class="form-general-input" placeholder="Tüm Kategorileri Aralarında Virgül(,) Olacak Şekilde Girin" type="text" name="categories">
+          <br>
+          <script>
+          let variation_count = 0
+          let image_count = 0
+          function addImage(){
+            document.getElementById("images").innerHTML += `
+            <br>
+          <input type="file" name="image_${image_count}">
+    `
+            image_count++;
+          }
+          function addVariation(){
+            document.getElementById("variations").innerHTML += `
+            <p>Varyasyon Türü</p>
+            <input class="form-general-input" placeholder="Örnek: Beden" name="variation_type_${variation_count}" type="text">
+            <p>Varyasyon Değeri</p>
+            <input class="form-general-input" placeholder="Örnek: S,M,L,XL,XXL" name="variation_values_${variation_count}" type="text">
+            `
+            variation_count += 1
+          }
+        </script>
+        <br>
+        <button style="background: #f27a1a; color: white" class="body-row-2-button">Kaydet</button>
+      </div>
+      <div style="flex: 1">
+        <p>Ürün Açıklaması</p>
+        <textarea class="form-general-input" name="product_description"></textarea>
+        <br>
+        <p>Varyasyonlar</p>
+        <div id="variations">
+          <button class="body-row-2-button" onclick="addVariation()">Varyasyon Ekle</button>
+        </div>
+        <p>Görseller</p>
+        <div id="images">
+          <button class="body-row-2-button" onclick="addImage()">Görsel Ekle</button>
+          <br>
+        </div>
+      </div>
+    </form>
+  </div>
+  </center>
+
+</body>
+</html>

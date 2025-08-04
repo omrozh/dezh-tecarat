@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .general-admin-table {
+          font-family: Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        .general-admin-table td, .general-admin-table th {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+
+        .general-admin-table tr:nth-child(even){background-color: #f2f2f2;}
+
+        .general-admin-table tr:hover {background-color: #ddd;}
+
+        .general-admin-table th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: #04AA6D;
+          color: white;
+        }
+        </style>
+    <link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+<br>
+<div style="display: flex;">
+    <div style="flex: 1">
+        <button class="body-row-2-button" onclick="document.location = '/admin/product/add'">Ürün Ekle</button>
+        <br>
+        <br>
+        <table class="general-admin-table">
+          <tr>
+            <th>Ürün Markası</th>
+            <th>Ürün Adı</th>
+            <th>Ürün Kategorileri</th>
+            <th>Ürün Fiyatı</th>
+            <th>Aktiflik</th>
+          </tr>
+          {% for i in products %}
+                <tr>
+                    <td>{{ i.brand_name }}</td>
+                    <td>{{ i.product_name }}</td>
+                    <td>
+                        {% for c in i.categories %}
+                            {{ c.category.category_name }},
+                        {% endfor %}
+                    </td>
+                    <td>{{ i.product_price_in_liras }}</td>
+                    <td style="cursor: pointer; text-decoration: underline" onclick="document.location = '/admin/update_item_status/{{ i.id }}'">
+                        {% if i.product_is_active %}
+                            <span style="color: #57B900">Aktif</span>
+                        {% else %}
+                            <span style="color: indianred">İnaktif</span>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div style="flex: 1; margin-left: 5px">
+        <button class="body-row-2-button" onclick="document.location = '/admin/category/add'">Kategori Ekle</button>
+        <br>
+        <br>
+        <table class="general-admin-table">
+          <tr>
+            <th>Kategori Adı</th>
+            <th>Aktif Ürün Sayısı</th>
+            <th></th>
+          </tr>
+          {% for i in categories %}
+            <tr>
+                <td>{{ i.category_name }}</td>
+                <td>{{ i.all_products | length }}</td>
+                <td style="cursor: pointer; color: indianred; text-decoration: underline" onclick="document.location = '/admin/remove/category/{{ i.id }}'">Kaldır</td>
+            </tr>
+          {% endfor %}
+        </table>
+    </div>
+</div>
+</body>
+</html>
