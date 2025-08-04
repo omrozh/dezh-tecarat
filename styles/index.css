@@ -79,7 +79,6 @@
 }
 
 .navbar-right-side-items {
-    flex: 2;
     margin-left: 50px; /* Keep as is for LTR */
     text-align: left; /* Changed to right for LTR */
     display: flex;
@@ -100,7 +99,7 @@
     font-size: 14px;
     display: inline-block;
     vertical-align: top;
-    margin-left: 5px;
+    margin-right: 5px;
     margin-top: 1px;
 }
 
