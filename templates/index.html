@@ -120,22 +120,97 @@
                     </div>
                 </div>
             </div>
-            <div style="width: 100%; border-radius: 10px; margin-top: 25px; background-image: url('/static/home-banner-ad.png'); height: 450px; background-size: cover; background-position: center"></div>
+            <div class="body-row-1">
+                <div class="row-1-item">
+                    <img src="https://cdn.dsmcdn.com/mnresize/200/200/homepage/prod/2024-12-03/fd783d97-77c9-4def-bc34-6a3baad268be.png" class="row-1-item-image">
+                    <br>
+                    <span class="row-1-item-text">جدیدها</span>
+                </div>
+                <div class="row-1-item">
+                    <img src="https://cdn.dsmcdn.com/mnresize/200/200/homepage/prod/2024-12-03/af030a99-0c34-40a0-9228-64e3cf462eae.png" class="row-1-item-image">
+                    <br>
+                    <span class="row-1-item-text">محصولات تخفیف‌دار</span>
+                </div>
+                <div class="row-1-item">
+                    <img src="https://cdn.dsmcdn.com/mnresize/200/200/homepage/prod/2024-12-03/85e24984-319b-4927-a127-ac3295d0152d.png" class="row-1-item-image">
+                    <br>
+                    <span class="row-1-item-text">محصولات پرطرفدار</span>
+                </div>
+                <div class="row-1-item">
+                    <img src="https://cdn.dsmcdn.com/mnresize/200/200/homepage/prod/2024-12-03/4dbbf828-dbe2-4f79-a049-4de11755eac1.png" class="row-1-item-image">
+                    <br>
+                    <span class="row-1-item-text">محصولات ویژه</span>
+                </div>
+                <div class="row-1-item">
+                    <img src="https://cdn.dsmcdn.com/mnresize/200/200/homepage/prod/2024-12-03/2194f8d3-f1f7-4f2b-8ba4-b4ff23d9187c.png" class="row-1-item-image">
+                    <br>
+                    <span class="row-1-item-text">محصولات فصلی</span>
+                </div>
+            </div>
+            <div class="body-row-2">
+                <button style="background-color: rgba(242,122,26,0.3); color: #f27a1a" class="body-row-2-button">
+                    محبوب ترین ها
+                </button>
+                <button style="background-color: rgba(73,199,237,0.3); color: #49C7ED" class="body-row-2-button">
+                    پر فروش ترین ها
+                </button>
+                <button style="background-color: rgba(87,185,0,0.3); color: #57B900" class="body-row-2-button">
+                    برندهای برجسته
+                </button>
+            </div>
             <div class="product-carousel-wrapper">
-                <h2 class="carousel-title">پوشاک</h2>
+                <h2 class="carousel-title">محصولات پرطرفدار</h2>
                 <div class="carousel">
-                    {% for product in clothing.all_products %}
-                    <div class="product-container" onclick="document.location = '/pdp/{{ product.id }}'">
-                        <div style="background-image: url('{{ product.images.0.image_uri }}');" class="product-image">
+                    <div class="product-container" onclick="(document.location = '/pdp/1')">
+                        <div style="background-image: url('https://cdn.dsmcdn.com/ty1685/prod/QC/20250526/21/b9356304-a355-309e-b0ba-a30bc4d53e4a/1_org_zoom.jpg');" class="product-image">
 
                         </div>
-                        <p class="product-name-text">{{ product.product_name }} <strong>{{ product.brand_name }}</strong></p>
-                        <p class="product-price">{{ "{:,.2f}".format(product.product_price_in_liras * exchange_rate) }} تومان</p>
+                        <p class="product-name-text"><strong>پنتی</strong> پیراهن ساتن طرح‌دار فلور و شلوار راه‌راه مشکی...</p>
+                        <p class="product-price">399.99 ₺</p>
                         <button class="product-add-to-cart-button">
-                            بررسی کردن
+                            افزودن به سبد خرید
                         </button>
                     </div>
-                    {% endfor %}
+                    <div class="product-container">
+                        <div style="background-image: url('https://cdn.dsmcdn.com/ty1679/prod/QC/20250512/10/a75e9149-a02c-3237-82cc-d0a7799b48a1/1_org_zoom.jpg');" class="product-image">
+
+                        </div>
+                        <p class="product-name-text"><strong>مادام کوکو</strong> روئت ست ملحفه یک نفره ۱۰۰% پنبه...</p>
+                        <p class="product-price">324.00 ₺</p>
+                        <button class="product-add-to-cart-button">
+                            افزودن به سبد خرید
+                        </button>
+                    </div>
+                    <div class="product-container">
+                        <div style="background-image: url('https://cdn.dsmcdn.com/ty1642/prod/QC/20250224/07/40a8316d-7c5e-3ff3-9e69-d99757c4e95b/1_org_zoom.jpg');" class="product-image">
+
+                        </div>
+                        <p class="product-name-text"><strong>H&M</strong> شلوار گشاد</p>
+                        <p class="product-price">619.99 ₺</p>
+                        <button class="product-add-to-cart-button">
+                            افزودن به سبد خرید
+                        </button>
+                    </div>
+                    <div class="product-container">
+                        <div style="background-image: url('https://cdn.dsmcdn.com/ty1506/product/media/images/prod/QC/20240827/10/c8fd0cdf-f7b9-3980-af8a-c4540edbcfee/1_org_zoom.jpg');" class="product-image">
+
+                        </div>
+                        <p class="product-name-text"><strong>کوتون</strong> شلوار کمربنددار، دمپای صاف، جیب‌دار...</p>
+                        <p class="product-price">999.99 ₺</p>
+                        <button class="product-add-to-cart-button">
+                            افزودن به سبد خرید
+                        </button>
+                    </div>
+                    <div class="product-container">
+                        <div style="background-image: url('https://cdn.dsmcdn.com/ty1579/prod/QC/20241004/19/ee7931d6-54df-3927-ac17-55a1c62f5bb2/1_org_zoom.jpg');" class="product-image">
+
+                        </div>
+                        <p class="product-name-text"><strong>H&M</strong> لباس یقه گرد و آستین‌دار</p>
+                        <p class="product-price">619.99 ₺</p>
+                        <button class="product-add-to-cart-button">
+                            افزودن به سبد خرید
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="brand-carousel-wrapper">
@@ -153,37 +228,114 @@
                 </div>
             </div>
             <div class="product-carousel-wrapper product-carousel-secondary">
-                <h2 class="carousel-title">آرایشی و بهداشتی</h2>
+                <h2 class="carousel-title">پوشاک</h2>
                 <div class="carousel">
-                    {% for product in accessories.all_products %}
-                    <div class="product-container" onclick="document.location = '/pdp/{{ product.id }}'">
-                        <div style="background-image: url('{{ product.images.0.image_uri }}');" class="product-image">
+                    <div class="product-container">
+                        <div style="background-image: url('https://cdn.dsmcdn.com/ty1553/prod/QC/20240917/08/744b6b35-258e-3d38-ba84-b5a1ea960284/1_org_zoom.jpg');" class="product-image">
 
                         </div>
-                        <p class="product-name-text">{{ product.product_name }} <strong>{{ product.brand_name }}</strong></p>
-                        <p class="product-price">{{ "{:,.2f}".format(product.product_price_in_liras * exchange_rate) }} تومان</p>
+                        <p class="product-name-text"><strong>U.S. Polo Assn.</strong> شلوار جین زنانه سفید مام استایل...</p>
+                        <p class="product-price">923.26 ₺</p>
                         <button class="product-add-to-cart-button">
-                            بررسی کردن
+                            افزودن به سبد خرید
                         </button>
                     </div>
-                    {% endfor %}
+                    <div class="product-container">
+                        <div style="background-image: url('https://cdn.dsmcdn.com/ty1633/prod/QC/20250206/18/4147eaa9-0fcf-37d0-9471-ff9933535020/1_org_zoom.jpg');" class="product-image">
+
+                        </div>
+                        <p class="product-name-text"><strong>برشکا</strong> شلوار زنانه روستیک</p>
+                        <p class="product-price">1100.00 ₺</p>
+                        <button class="product-add-to-cart-button">
+                            افزودن به سبد خرید
+                        </button>
+                    </div>
+                    <div class="product-container">
+                        <div style="background-image: url('https://cdn.dsmcdn.com/ty1648/prod/QC/20250307/16/08b8a0db-55a2-3d14-a56c-46bdb756cefd/1_org_zoom.jpg');" class="product-image">
+
+                        </div>
+                        <p class="product-name-text"><strong>U.S. Polo Assn.</strong> پیراهن مردانه مشکی یقه اسکوپ اورسایز...</p>
+                        <p class="product-price">450.00 ₺</p>
+                        <button class="product-add-to-cart-button">
+                            افزودن به سبد خرید
+                        </button>
+                    </div>
+                    <div class="product-container">
+                        <div style="background-image: url('https://cdn.dsmcdn.com/ty1685/prod/QC/20250526/01/c134b7ed-bba0-3df3-9290-f8d07ff2354b/1_org_zoom.jpg');" class="product-image">
+
+                        </div>
+                        <p class="product-name-text"><strong>ماوی</strong> تی‌شرت سفید طرح‌دار میو، مناسب،...</p>
+                        <p class="product-price">329.00 ₺</p>
+                        <button class="product-add-to-cart-button">
+                            افزودن به سبد خرید
+                        </button>
+                    </div>
+                    <div class="product-container">
+                        <div style="background-image: url('https://cdn.dsmcdn.com/ty1549/prod/QC/20240916/19/3a315bf4-c867-3945-ae49-155e4357f528/1_org_zoom.jpg');" class="product-image">
+
+                        </div>
+                        <p class="product-name-text"><strong>U.S. Polo Assn.</strong> شلوار جین زنانه آبی روشن مام...</p>
+                        <p class="product-price">1827.96 ₺</p>
+                        <button class="product-add-to-cart-button">
+                            افزودن به سبد خرید
+                        </button>
+                    </div>
                 </div>
             </div>
+            <img src="/static/home-banner-ad.png" style="width: 100%; border-radius: 10px; margin-top: 25px" alt="">
             <div class="product-carousel-wrapper product-carousel-secondary">
-                <h2 class="carousel-title">لوازم جانبی</h2>
+                <h2 class="carousel-title">پیشنهادات</h2>
                 <div class="carousel">
-                    {% for product in cosmetics.all_products %}
-                    <div class="product-container" onclick="document.location = '/pdp/{{ product.id }}'">
-                        <div style="background-image: url('{{ product.images.0.image_uri }}');" class="product-image">
+                    <div class="product-container">
+                        <div style="background-image: url('https://cdn.dsmcdn.com/ty1553/prod/QC/20240917/08/744b6b35-258e-3d38-ba84-b5a1ea960284/1_org_zoom.jpg');" class="product-image">
 
                         </div>
-                        <p class="product-name-text">{{ product.product_name }} <strong>{{ product.brand_name }}</strong></p>
-                        <p class="product-price">{{ "{:,.2f}".format(product.product_price_in_liras * exchange_rate) }} تومان</p>
+                        <p class="product-name-text"><strong>U.S. Polo Assn.</strong> شلوار جین زنانه سفید مام استایل...</p>
+                        <p class="product-price">923.26 ₺</p>
                         <button class="product-add-to-cart-button">
-                            بررسی کردن
+                            افزودن به سبد خرید
                         </button>
                     </div>
-                    {% endfor %}
+                    <div class="product-container">
+                        <div style="background-image: url('https://cdn.dsmcdn.com/ty1633/prod/QC/20250206/18/4147eaa9-0fcf-37d0-9471-ff9933535020/1_org_zoom.jpg');" class="product-image">
+
+                        </div>
+                        <p class="product-name-text"><strong>برشکا</strong> شلوار زنانه روستیک</p>
+                        <p class="product-price">1100.00 ₺</p>
+                        <button class="product-add-to-cart-button">
+                            افزودن به سبد خرید
+                        </button>
+                    </div>
+                    <div class="product-container">
+                        <div style="background-image: url('https://cdn.dsmcdn.com/ty1648/prod/QC/20250307/16/08b8a0db-55a2-3d14-a56c-46bdb756cefd/1_org_zoom.jpg');" class="product-image">
+
+                        </div>
+                        <p class="product-name-text"><strong>U.S. Polo Assn.</strong> پیراهن مردانه مشکی یقه اسکوپ اورسایز...</p>
+                        <p class="product-price">450.00 ₺</p>
+                        <button class="product-add-to-cart-button">
+                            افزودن به سبد خرید
+                        </button>
+                    </div>
+                    <div class="product-container">
+                        <div style="background-image: url('https://cdn.dsmcdn.com/ty1685/prod/QC/20250526/01/c134b7ed-bba0-3df3-9290-f8d07ff2354b/1_org_zoom.jpg');" class="product-image">
+
+                        </div>
+                        <p class="product-name-text"><strong>ماوی</strong> تی‌شرت سفید طرح‌دار میو، مناسب،...</p>
+                        <p class="product-price">329.00 ₺</p>
+                        <button class="product-add-to-cart-button">
+                            افزودن به سبد خرید
+                        </button>
+                    </div>
+                    <div class="product-container">
+                        <div style="background-image: url('https://cdn.dsmcdn.com/ty1549/prod/QC/20240916/19/3a315bf4-c867-3945-ae49-155e4357f528/1_org_zoom.jpg');" class="product-image">
+
+                        </div>
+                        <p class="product-name-text"><strong>U.S. Polo Assn.</strong> شلوار جین زنانه آبی روشن مام...</p>
+                        <p class="product-price">1827.96 ₺</p>
+                        <button class="product-add-to-cart-button">
+                            افزودن به سبد خرید
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -204,7 +356,6 @@
 
             </div>
         </div>
-
         <div class="footer-desktop">
             <div class="footer-column">
                 <p class="footer-column-title">شرکت</p>

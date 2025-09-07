@@ -123,18 +123,28 @@
             </div>
             <div class="product-details-wrapper">
                 <div class="product-images-wrapper">
-                    <img id="product-main-image" src="{{ product.images.0.image_uri }}" alt="">
+                    <img id="product-main-image" src="https://cdn.dsmcdn.com/ty1685/prod/QC/20250526/21/b9356304-a355-309e-b0ba-a30bc4d53e4a/1_org_zoom.jpg" alt="">
                     <center class="product-image-selector">
-                        {% for i in product.images %}
-                            <img onclick="document.getElementById('product-main-image').src = this.src" class="product-image-selector-image" src="{{ i.image_uri }}" alt="">
-                        {% endfor %}
+                        <img onclick="document.getElementById('product-main-image').src = this.src" class="product-image-selector-image" src="https://cdn.dsmcdn.com/mnresize/128/192/ty1685/prod/QC/20250526/21/b9356304-a355-309e-b0ba-a30bc4d53e4a/1_org_zoom.jpg" alt="">
+                        <img onclick="document.getElementById('product-main-image').src = this.src" class="product-image-selector-image" src="https://cdn.dsmcdn.com/mnresize/128/192/ty1685/prod/QC/20250526/21/beaeedea-c8f3-33dc-8324-598a0e0723fc/1_org_zoom.jpg" alt="">
+                        <img onclick="document.getElementById('product-main-image').src = this.src" class="product-image-selector-image" src="https://cdn.dsmcdn.com/mnresize/128/192/ty1683/prod/QC/20250526/21/02c961bd-5a68-30e5-b1ac-d2071a7181b6/1_org_zoom.jpg" alt="">
+                        <img onclick="document.getElementById('product-main-image').src = this.src" class="product-image-selector-image" src="https://cdn.dsmcdn.com/mnresize/128/192/ty1685/prod/QC/20250526/21/d3f012da-2dbc-3fc6-93bb-f984b01d7b3f/1_org_zoom.jpg" alt="">
+                        <img onclick="document.getElementById('product-main-image').src = this.src" class="product-image-selector-image" src="https://cdn.dsmcdn.com/mnresize/128/192/ty1685/prod/QC/20250526/21/b9356304-a355-309e-b0ba-a30bc4d53e4a/1_org_zoom.jpg" alt="">
+                        <img onclick="document.getElementById('product-main-image').src = this.src" class="product-image-selector-image" src="https://cdn.dsmcdn.com/mnresize/128/192/ty1685/prod/QC/20250526/21/b9356304-a355-309e-b0ba-a30bc4d53e4a/1_org_zoom.jpg" alt="">
+                        <img onclick="document.getElementById('product-main-image').src = this.src" class="product-image-selector-image" src="https://cdn.dsmcdn.com/mnresize/128/192/ty1685/prod/QC/20250526/21/beaeedea-c8f3-33dc-8324-598a0e0723fc/1_org_zoom.jpg" alt="">
+                        <img onclick="document.getElementById('product-main-image').src = this.src" class="product-image-selector-image" src="https://cdn.dsmcdn.com/mnresize/128/192/ty1683/prod/QC/20250526/21/02c961bd-5a68-30e5-b1ac-d2071a7181b6/1_org_zoom.jpg" alt="">
+                        <img onclick="document.getElementById('product-main-image').src = this.src" class="product-image-selector-image" src="https://cdn.dsmcdn.com/mnresize/128/192/ty1685/prod/QC/20250526/21/d3f012da-2dbc-3fc6-93bb-f984b01d7b3f/1_org_zoom.jpg" alt="">
+                        <img onclick="document.getElementById('product-main-image').src = this.src" class="product-image-selector-image" src="https://cdn.dsmcdn.com/mnresize/128/192/ty1685/prod/QC/20250526/21/b9356304-a355-309e-b0ba-a30bc4d53e4a/1_org_zoom.jpg" alt="">
+                        <img onclick="document.getElementById('product-main-image').src = this.src" class="product-image-selector-image" src="https://cdn.dsmcdn.com/mnresize/128/192/ty1685/prod/QC/20250526/21/beaeedea-c8f3-33dc-8324-598a0e0723fc/1_org_zoom.jpg" alt="">
+                        <img onclick="document.getElementById('product-main-image').src = this.src" class="product-image-selector-image" src="https://cdn.dsmcdn.com/mnresize/128/192/ty1683/prod/QC/20250526/21/02c961bd-5a68-30e5-b1ac-d2071a7181b6/1_org_zoom.jpg" alt="">
+                        <img onclick="document.getElementById('product-main-image').src = this.src" class="product-image-selector-image" src="https://cdn.dsmcdn.com/mnresize/128/192/ty1685/prod/QC/20250526/21/d3f012da-2dbc-3fc6-93bb-f984b01d7b3f/1_org_zoom.jpg" alt="">
                     </center>
                 </div>
                 <div class="product-information-wrapper desktop">
-                    <h2 class="product-title">{{ product.product_name }} <strong>{{ product.brand_name }}</strong></h2>
+                    <h2 class="product-title"><strong>پنتی</strong> پیراهن ساتن فلور، شلوار، پیراهن راه‌راه مشکی - مجموعه عشق پاریس</h2>
                     <div class="product-average-ratings-wrapper">
                         <div class="rating-score">
-                            {{ product.rating }}
+                            3.5
                         </div>
                         <div class="starts">
                             <i class="bi bi-star-fill"></i>
@@ -143,58 +153,56 @@
                             -
                         </strong>
                         <div class="number-of-ratings">
-                            <strong>{{ product.number_of_ratings }}</strong> امتیاز
+                            <strong>55</strong> امتیاز
                         </div>
                     </div>
                     <div class="dezh-tecarat-guarantee">
                         <i class="bi bi-patch-check-fill"></i> گارانتی دژ تجارت!
                     </div>
                     <div class="product-price-wrapper">
-                        <h1 class="product-price-title">{{ "{:,.2f}".format(product.product_price_in_liras * exchange_rate) }} تومان</h1>
+                        <h1 class="product-price-title">399.99 TL</h1>
                     </div>
-                    {% for i in product.variation_types %}
-                        <div class="product-size-selection">
-                            <p class="product-size-selection-title">
-                                {{ i.variation_type }}
-                            </p>
-                            {% for j in i.variations %}
-                                <button id="desktop-{{ j.id }}" class="product-small-action-button {{ i.id }}" onclick="selectVariation('{{ i.id }}', '{{ j.id }}', 'desktop')">
-                                    {{ j.variation_value }}
-                                </button>
-                            {% endfor %}
-                        </div>
-                    {% endfor %}
+                    <div class="product-size-selection">
+                        <p class="product-size-selection-title">
+                            سایز:
+                        </p>
+                        <button class="product-small-action-button">
+                            XS
+                        </button>
+                        <button class="product-small-action-button">
+                            S
+                        </button>
+                        <button class="product-small-action-button">
+                            M
+                        </button>
+                        <button class="product-small-action-button">
+                            L
+                        </button>
+                        <button class="product-small-action-button">
+                            XL
+                        </button>
+                        <button class="product-small-action-button">
+                            2XL
+                        </button>
+                    </div>
                     <div class="product-main-action-buttons-wrapper">
-                        <button onclick="addToCart(this)" class="product-add-to-cart-button product-add-to-cart-button-main">
+                        <button class="product-add-to-cart-button product-add-to-cart-button-main">
                             افزودن به سبد خرید
                         </button>
                         <button class="product-small-action-button">
                             <i class="bi bi-bookmark-heart"></i>
                         </button>
                     </div>
-                    <script>
-                        function returnButtonBackToNormal(trigger){
-                            trigger.innerText = 'افزودن به سبد خرید'
-                            trigger.style.background = '#FF6000'
-                            trigger.style.borderColor = '#FF6000'
-                        }
-                        function addToCart(trigger){
-                            let cart_item = {
-                                "product": '{{ product.id }}',
-                                variations: window.variations
-                            }
-                            let cart_item_string = JSON.stringify(cart_item)
-                            document.cookie = `cart-item-{{ product.id }}=${cart_item_string}`
-                            trigger.innerText = 'به سبد خرید اضافه شد'
-                            trigger.style.background = '#676767'
-                            trigger.style.borderColor = '#676767'
-                            setTimeout(function (){returnButtonBackToNormal(trigger)}, 1500)
-                        }
-                    </script>
                     <div class="product-summary">
                         <p class="product-summary-title">توضیحات محصول:</p>
-                        <p class="product-summary-text" style="white-space: pre-wrap">
-                            {{ product.product_description }}
+                        <p class="product-summary-text">
+                            سایز: S قد: 173 سانتی‌متر، سینه: 84 سانتی‌متر، کمر: 60 سانتی‌متر، باسن: 92 سانتی‌متر
+                            <br>
+                            <br>
+                            ست پیراهن و شلوار ساتن فلور SS، یک ست شلوار ساتن شیک با تم روز ولنتاین است. این ست با طرح‌های قلب، فضایی رمانتیک دارد و ترکیبی عالی از شیک‌پوشی و راحتی را ارائه می‌دهد. بافت ساتن آن در هر لحظه از شب به شما درخشش می‌بخشد و طرح آن، تجربه‌ی خواب گرم و راحتی را فراهم می‌کند. برای کسانی که نمی‌خواهند از شیک‌پوشی خود بگذرند و راحتی را در اولویت قرار می‌دهند، انتخابی ایده‌آل است. این زیبایی ساتن را کشف کنید و روز ولنتاین را به خاص‌ترین شکل جشن بگیرید!
+                            <br>
+                            <br>
+                            پارچه اصلی: ویسکوز 60%، پلی استر 40%
                         </p>
                     </div>
                 </div>
@@ -210,59 +218,56 @@
                 </div>
             </div>
             <div class="product-information-wrapper mobile">
-                    <h2 class="product-title">{{ product.product_name }} <strong>{{ product.brand_name }}</strong></h2>
+                    <h2 class="product-title"><strong>پنتی</strong> پیراهن ساتن فلور، شلوار، پیراهن راه‌راه مشکی - مجموعه عشق پاریس</h2>
                     <div class="product-average-ratings-wrapper">
                         <div class="rating-score">
-                            {{ product.rating }}
+                            3.5
                         </div>
                         <div class="starts">
                             <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <i class="bi bi-star"></i>
                         </div>
                         <strong class="ratings-separator">
                             -
                         </strong>
                         <div class="number-of-ratings">
-                            <strong>{{ product.number_of_ratings }}</strong> امتیاز
+                            <strong>55</strong> امتیاز
                         </div>
                     </div>
                     <div class="dezh-tecarat-guarantee">
                         <i class="bi bi-patch-check-fill"></i> گارانتی دژ تجارت!
                     </div>
                     <div class="product-price-wrapper">
-                        <h1 class="product-price-title">{{ "{:,.2f}".format(product.product_price_in_liras * exchange_rate) }} تومان</h1>
+                        <h1 class="product-price-title">399.99 TL</h1>
                     </div>
-                    {% for i in product.variation_types %}
-                        <div class="product-size-selection">
-                            <p class="product-size-selection-title">
-                                {{ i.variation_type }}
-                            </p>
-                            {% for j in i.variations %}
-                                <button id="mobile-{{ j.id }}" class="product-small-action-button {{ i.id }}"  onclick="selectVariation('{{ i.id }}', '{{ j.id }}', 'mobile')">
-                                    {{ j.variation_value }}
-                                </button>
-                            {% endfor %}
-                        </div>
-                    {% endfor %}
-                    <script>
-                        window.variations = {}
-                        function selectVariation(variation_type, variation_id, device){
-                            let variation_buttons = document.getElementsByClassName(variation_type)
-                            for(let i = 0; i < variation_buttons.length; i++){
-                                variation_buttons[i].style.color = "#676767";
-                                variation_buttons[i].style.backgroundColor = "transparent";
-                            }
-
-                            window.variations[variation_type] = variation_id
-                            document.getElementById(device + "-" + variation_id).style.backgroundColor = "#676767"
-                            document.getElementById(device + "-" + variation_id).style.color = "white"
-                        }
-                        {% for i in product.variation_types %}
-                            selectVariation("{{i.id}}", "{{i.variations.0.id}}", "mobile")
-                            selectVariation("{{i.id}}", "{{i.variations.0.id}}", "desktop")
-                        {% endfor %}
-                    </script>
+                    <div class="product-size-selection">
+                        <p class="product-size-selection-title">
+                            سایز:
+                        </p>
+                        <button class="product-small-action-button">
+                            XS
+                        </button>
+                        <button class="product-small-action-button">
+                            S
+                        </button>
+                        <button class="product-small-action-button">
+                            M
+                        </button>
+                        <button class="product-small-action-button">
+                            L
+                        </button>
+                        <button class="product-small-action-button">
+                            XL
+                        </button>
+                        <button class="product-small-action-button">
+                            2XL
+                        </button>
+                    </div>
                     <div class="product-main-action-buttons-wrapper">
-                        <button onclick="addToCart(this)" class="product-add-to-cart-button product-add-to-cart-button-main">
+                        <button class="product-add-to-cart-button product-add-to-cart-button-main">
                             افزودن به سبد خرید
                         </button>
                         <button class="product-small-action-button">
