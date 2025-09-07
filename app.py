@@ -10,6 +10,7 @@ app = flask.Flask(__name__)
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///site.db"
 app.config["SECRET_KEY"] = "jsiv-3mdxa-svFS3-afsaSW"
+exchange_rate = 80000
 
 db = SQLAlchemy(app=app)
 
@@ -72,8 +73,24 @@ class Product(db.Model):
     product_is_active = db.Column(db.Boolean, default=True)
 
     @property
+    def rating(self):
+        ratings = ProductRating.query.filter_by(product_fk=self.id).all()
+        if len(ratings) == 0:
+            return "N/A"
+        return sum([i.rating_score for i in ratings]) / len(ratings)
+
+    @property
+    def number_of_ratings(self):
+        ratings = ProductRating.query.filter_by(product_fk=self.id).all()
+        return len(ratings)
+
+    @property
     def images(self):
-        return ProductImage.query.filter_by(product_fk=self.id).all()
+        product_images = ProductImage.query.filter_by(product_fk=self.id).all()
+        if len(product_images) > 0:
+            return product_images
+        else:
+            return [ProductImage.query.first()]
 
     @property
     def variation_types(self):
@@ -426,7 +443,11 @@ def get_all_brands():
 
 @app.route("/")
 def index():
-    return flask.render_template("index.html")
+    clothing = Category.query.filter_by(category_name="Giyim").first()
+    cosmetics = Category.query.filter_by(category_name="Kozmetik").first()
+    accessories = Category.query.filter_by(category_name="Aksesuar").first()
+    return flask.render_template("index.html", clothing=clothing, accessories=accessories, cosmetics=cosmetics,
+                                 exchange_rate=exchange_rate)
 
 
 @app.route("/admin/product")
@@ -524,7 +545,7 @@ def static_host(filename):
 
 @app.route("/pdp/<product_id>")
 def product_detail_page(product_id):
-    return flask.render_template("pdp.html")
+    return flask.render_template("pdp.html", product=Product.query.get(product_id), exchange_rate=exchange_rate)
 
 
 @app.route("/profile")
